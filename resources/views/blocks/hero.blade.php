@@ -18,7 +18,7 @@ $sectionClass .= ' ' . $background;
 	<div class="__wrapper c-main relative grid grid-cols-1 md:grid-cols-2 gap-8">
 		<div class="__headers">
 			<h1 data-gsap-element="header" class="text-white m-header">{{ $g_hero['header'] }}</h1>
-			<h2 data-gsap-element="header" class="text-white m-header">{{ $g_hero['title'] }}</h2>
+			<h3 data-gsap-element="header" class="text-white m-header">{{ $g_hero['title'] }}</h3>
 		</div>
 
 		<div class="__content">
