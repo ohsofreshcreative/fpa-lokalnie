@@ -91,35 +91,37 @@ body {
 
 :root {
 	--body: #130101 !important;
-	--primary: #CE112A;
-	--p-hover: #EFB0B8;
-	--p-100: #F5CFD4;
-	--p-200: #EFB0B8;
-	--p-300: #E78895;
-	--p-400: #DE6071;
-	--p-500: #D6394E;
-	--p-600: #CE112A;
-	--p-700: #AC0E23;
-	--p-800: #890B1C;
-	--p-900: #670915;
-	--p-dark: #45060E;
-	--p-darker: #290308;
-	--p-brand: #CE112A;
 
-	--secondary: #767676;
-	--s-hover: #D1D1D1;
-	--s-50: #E4E4E4;
-	--s-100: #D1D1D1;
-	--s-200: #BBBBBB;
-	--s-300: #A4A4A4;
-	--s-400: #8D8D8D;
-	--s-500: #626262;
-	--s-600: #767676;
-	--s-700: #4F4F4F;
-	--s-800: #3B3B3B;
-	--s-900: #272727;
-	--s-dark: #272727;
-	--s-darker: #181818;
+	--primary: #0063C0;
+	--p-hover: #2A7DCB;
+	--p-100: #CCE0F2;
+	--p-200: #AACBEA;
+	--p-300: #80B1E0;
+	--p-400: #5597D5;
+	--p-500: #2A7DCB;
+	--p-600: #0063C0;
+	--p-700: #0053A0;
+	--p-800: #004280;
+	--p-900: #003260;
+	--p-dark: #002140;
+	--p-darker: #000426;
+	--p-brand: #0063C0;
+
+	--secondary: #FA3B85;
+	--s-hover: #FB5C99;
+	--s-50: #FED8E7;
+	--s-100: #FDBED6;
+	--s-200: #FD9DC2;
+	--s-300: #FC7CAE;
+	--s-400: #FB5C99;
+	--s-500: #FA3B85;
+	--s-600: #D0316F;
+	--s-700: #A72759;
+	--s-800: #7D1E43;
+	--s-900: #53142C;
+	--s-dark: #53142C;
+	--s-darker: #320C1B;
+
 
 	--text-p-light: var(--p-200);
 	--text-p-lighter: var(--p-400);
@@ -127,7 +129,7 @@ body {
 	--text-s-lighter: var(--s-200);
 
 	--gray: #63656a;
-	--bg: #45060E;
+	--bg: #001A4C;
 	--bg-p-light: var(--p-200);
 	--bg-p-lighter: var(--p-100);
 	--bg-s-light: var(--s-200);
@@ -1156,8 +1158,8 @@ input[type='checkbox'] {
 }
 
 .wpcf7 .wpcf7-submit:disabled {
-	background: var(--s-300) !important;
-	color: var(--s-100) !important;
+	background: #bfbfbf !important;
+	color: #dfdfdf !important;
 	cursor: not-allowed;
 }
 
@@ -1325,9 +1327,12 @@ article.post:hover img {
 
 /*--- !SHOP ---*/
 
-.woocommerce-shop {
-	
+.woocommerce img, .woocommerce-page img {
+    height: unset;
+    max-width: unset;
 }
+
+.woocommerce-shop {}
 
 .woocommerce-page footer {
 	margin-top: 104px;
@@ -1409,9 +1414,14 @@ article.post:hover img {
 	.woocommerce-product-details__short-description {
 		color: #FFF;
 
-		h1, h2, h3, h4, h5, h6 {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
 			color: var(--p-500);
-			margin-bottom:16px;
+			margin-bottom: 16px;
 		}
 
 		p {
@@ -1421,12 +1431,12 @@ article.post:hover img {
 		p b,
 		p strong {
 			color: var(--p-500);
-			margin-bottom:8px;
+			margin-bottom: 8px;
 			display: block;
 		}
 
 		ul {
-			margin:-8px 0 16px 12px;
+			margin: -8px 0 16px 12px;
 		}
 
 		ul li {

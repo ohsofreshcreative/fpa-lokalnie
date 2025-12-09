@@ -11,7 +11,7 @@ $sectionClass .= ' ' . $background;
 @endphp
 
 @php
-$backgroundImage = !empty($bottom['image']['url']) ? "linear-gradient(90deg, rgba(41, 3, 8, 1) 40%, rgba(41, 3, 8, 0.3) 100%), url({$bottom['image']['url']})" : '';
+$backgroundImage = !empty($bottom['image']['url']) ? "linear-gradient(90deg, rgb(0, 6, 64, 1) 40%, rgb(0, 6, 64, 0.3) 100%), url({$bottom['image']['url']})" : '';
 @endphp
 
 <!-- bottom-block -->
