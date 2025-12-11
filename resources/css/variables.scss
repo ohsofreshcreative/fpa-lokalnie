@@ -1328,8 +1328,8 @@ article.post:hover img {
 /*--- !SHOP ---*/
 
 .woocommerce img, .woocommerce-page img {
-    height: unset;
-    max-width: unset;
+    height: auto;
+    max-width: 100%;
 }
 
 .woocommerce-shop {}
@@ -1598,7 +1598,7 @@ article.post:hover img {
 	.woocommerce form .form-row .input-text,
 	.woocommerce form .form-row select {
 		background-color: var(--p-dark);
-		border: 1px solid var(--s-300);
+    border: 1px solid var(--p-300);
 		color: #fff;
 	}
 

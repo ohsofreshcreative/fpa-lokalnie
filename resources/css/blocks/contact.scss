@@ -49,7 +49,7 @@
     width: 100%;
     padding: 10px 22px;
     border: none;
-    border: 1px solid var(--s-300);
+    border: 1px solid var(--p-300);
     background: transparent;
     font-size: 16px;
     color: #fff;
@@ -70,20 +70,20 @@
   input[type='number']:focus,
   input[type='tel']:focus,
   textarea:focus{
-    border: 1px solid var(--s-800);
+    border: 1px solid var(--p-800);
     transition: all 0.5s ease-out;
-	background-color: var(--p-800);
+	background-color: var(--p-500);
   }
 
 
   ::placeholder {
-	color:var(--p-800);
+	color:var(--p-700);
   }
 
   input[type='submit'] {
     font-family: var(--btns-font);
     font-size: var(--btns-fontsize);
-    background: var(--primary) !important;
+    background: var(--secondary) !important;
     color: #fff;
     padding: var(--btns-padding);
     display: inline-block;
@@ -98,7 +98,7 @@
   }
 
   input[type='submit']:hover {
-    background: var(--p-hover) !important;
+    background: var(--s-hover) !important;
     color: #fff;
     transition: all 0.2s ease-out;
     border: 1px solid transparent;

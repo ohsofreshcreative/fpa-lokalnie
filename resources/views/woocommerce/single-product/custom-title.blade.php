@@ -5,8 +5,11 @@
       {{ get_the_title() }}
 
       @if ($custom_text)
-        <h3 class="primary">{{ esc_html($custom_text) }}</h3>
-      @endif
+			@php
+			$event_date = date_i18n('j F Y', strtotime($custom_text));
+			@endphp
+			<h3 class="primary">{{ $event_date }}</h3>
+			@endif
     </h2>
   </div>
 
