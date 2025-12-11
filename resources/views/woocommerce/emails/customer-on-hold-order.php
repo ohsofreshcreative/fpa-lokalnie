@@ -26,7 +26,46 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <p>Dzień dobry,</p>
 
-<p>bardzo dziękujemy za rejestrację na konferencję VI Forum Zakażeń, która odbędzie się w dniach 13-15 maja 2026 r. w Hotelu Windsor w Jachrance. <b>Twoje zgłoszenie zostało przyjęte.</b></p>
+<?php
+// Inicjalizacja zmiennych na dane wydarzenia
+$event_name = '';
+$event_date = '';
+$event_place = '';
+$event_city = '';
+
+// Pobierz produkty z zamówienia
+$items = $order->get_items();
+
+// Sprawdź, czy są produkty w zamówieniu
+if ( ! empty( $items ) ) {
+    // Pobierz pierwszy produkt z zamówienia
+    $item = array_shift( $items );
+    $product = $item->get_product();
+
+    if ( $product ) {
+        $product_id = $product->get_id();
+        
+        // Pobierz dane z pól ACF na podstawie ID produktu
+        $event_name = $product->get_name();
+        $event_date_raw = get_field('event_date', $product_id); // Format Ymd
+        $event_place = get_field('miejsce', $product_id);
+        $event_city = get_field('city', $product_id);
+
+        // Sformatuj datę do czytelnej formy, np. "13-15 maja 2026"
+        // Ta część może wymagać dostosowania, jeśli masz pole na datę końcową
+        if($event_date_raw) {
+            $date_obj = date_create_from_format('Ymd', $event_date_raw);
+            if ($date_obj) {
+                // Ustawienie polskiej lokalizacji dla nazw miesięcy
+                setlocale(LC_TIME, 'pl_PL.UTF-8');
+                $event_date = strftime('%e %B %Y', $date_obj->getTimestamp());
+            }
+        }
+    }
+}
+?>
+
+<p>bardzo dziękujemy za rejestrację na konferencję <?php echo esc_html( $event_name ); ?>, która odbędzie się w dniu <?php echo esc_html( $event_date ); ?> w <?php echo esc_html( $event_place ); ?> w <?php echo esc_html( $event_city ); ?>. <b>Twoje zgłoszenie zostało przyjęte.</b></p>
 
 <b>Dane do przelewu:</b>
 <p>Evereth Publishing Sp. z o.o.<br>
