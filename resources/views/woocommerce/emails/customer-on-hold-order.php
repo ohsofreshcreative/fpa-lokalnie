@@ -65,7 +65,7 @@ if ( ! empty( $items ) ) {
 }
 ?>
 
-<p>bardzo dziękujemy za rejestrację na warsztaty <?php echo esc_html( $event_name ); ?>, które odbędą się w dniu <?php echo esc_html( $event_date ); ?> w <?php echo esc_html( $event_place ); ?>. <b>Twoje zgłoszenie oczekuje na płatność.</b></p>
+<p>potwierdzamy rejestrację na <?php echo esc_html( $event_name ); ?>, które odbędą się w dniu <?php echo esc_html( $event_date ); ?> w <?php echo esc_html( $event_place ); ?>. <b>Twoje zgłoszenie oczekuje na płatność.</b></p>
 
 <?php
 
