@@ -85,6 +85,20 @@ $wrapper_classes   = apply_filters(
 				<?php endif; ?>
 			</div>
 		</div>
+
+        <?php if (have_rows('honorary_patrons')) : ?>
+            <div class="mt-4">
+                <h5 class="text-white b-bottom-p w-max mb-2">Patroni honorowi</h5>
+                <div class="__logos flex flex-wrap items-center gap-4 mt-4">
+                    <?php while (have_rows('honorary_patrons')) : the_row(); ?>
+                        <?php $logo = get_sub_field('honorary_patron_logo'); ?>
+                        <?php if ($logo) : ?>
+                            <div class="__img"><img src="<?php echo esc_url($logo); ?>" alt="Logo patrona honorowego" /></div>
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        <?php endif; ?>
 	</div>
 
 
