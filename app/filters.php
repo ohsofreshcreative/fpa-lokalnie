@@ -131,3 +131,22 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
     $fields['billing']['billing_email']['placeholder'] = 'na ten adres zostanie przesłane potwierdzenie rejestracji oraz faktura';
     return $fields;
 });
+
+
+
+/*--- CHANGE COUPON TEXTS ---*/
+
+add_filter('gettext', function ($translated, $text, $domain) {
+    if ($domain === 'woocommerce') {
+        if ($text === 'Have a coupon?') {
+            return 'Masz kod rabatowy?';
+        }
+        if ($text === 'Coupon code') {
+            return 'Kod rabatowy';
+        }
+        if ($text === 'Apply coupon') {
+            return 'Wykorzystaj kod';
+        }
+    }
+    return $translated;
+}, 20, 3);

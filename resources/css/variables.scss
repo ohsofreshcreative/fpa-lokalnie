@@ -1327,9 +1327,10 @@ article.post:hover img {
 
 /*--- !SHOP ---*/
 
-.woocommerce img, .woocommerce-page img {
-    height: auto;
-    max-width: 100%;
+.woocommerce img,
+.woocommerce-page img {
+	height: auto;
+	max-width: 100%;
 }
 
 .woocommerce-shop {}
@@ -1461,7 +1462,9 @@ article.post:hover img {
 
 /*--- !CHECKOUT ---*/
 
-#add_payment_method #payment ul.payment_methods li img, .woocommerce-cart #payment ul.payment_methods li img, .woocommerce-checkout #payment ul.payment_methods li img {
+#add_payment_method #payment ul.payment_methods li img,
+.woocommerce-cart #payment ul.payment_methods li img,
+.woocommerce-checkout #payment ul.payment_methods li img {
 	filter: invert(1) grayscale(1);
 	margin: -7px 0 0 0.5em;
 	display: inline-block;
@@ -1597,7 +1600,7 @@ article.post:hover img {
 	.woocommerce form .form-row .input-text,
 	.woocommerce form .form-row select {
 		background-color: var(--p-dark);
-    border: 1px solid var(--p-300);
+		border: 1px solid var(--p-300);
 		color: #fff;
 	}
 
@@ -1694,6 +1697,46 @@ article.post:hover img {
 .woocommerce-result-count,
 .woocommerce-ordering {
 	display: none !important;
+}
+
+#woocommerce-checkout-form-coupon {
+	display:flex;
+	gap:16px;
+	background-color: var(--p-dark);
+	input {
+		border-radius: var(--btns-radius);
+	}
+	.coupon-error-notice {
+		color: red;
+	}
+	button {
+		font-family: var(--btns-font);
+		font-size: var(--btns-fontsize);
+		background: var(--primary);
+		color: #fff;
+		padding: 14px 32px;
+		display: inline-block;
+		transition: all 0.2s ease-out;
+		font-weight: 600;
+		border: 1px solid transparent;
+		border-radius: var(--btns-radius);
+		text-decoration: none;
+		white-space: nowrap;
+		width: max-content;
+	}
+
+	button:hover {
+		color: #fff;
+		background: var(--p-hover);
+		transition: all 0.2s ease-out;
+		border: 1px solid transparent;
+	}
+}
+
+.woocommerce-checkout-review-order {
+	.woocommerce-remove-coupon {
+		color:var(--p-300);
+	}
 }
 
 /*--- !THANK YOU PAGE ---*/
